@@ -24,6 +24,7 @@ python sort_contigs_on_ref.py \
 
 annotate_TEs_in_Nd1.py is customized for the annotation of the Nd-1 genome assembly based on Araport11. Adjustments in the script are required for application to other data sets.
 
+
 4) RBH identification
 
 python identify_RBHs.py \
@@ -53,11 +54,40 @@ OPTIONAL: \
 
 7) map annotation
 
+python map_annotation.py \
+--input_file <FULL_PATH_TO_INPUT_FILE>
 
+WARNING: path to annotation file must be added in this script!
 
 
 8) check TE overlap
+
+check_TEs_for_overlap_with_genes.py is customized for the analysis of Nd-1. Modification of paths within this script are required to apply it to other data sets.
+
+
 9) construct coverage file
+
+python construct_cov_file.py \
+--in <BAM_FILE> \
+--out <OUTPUT_FILE> \
+--bam_is_sorted <PREVENTS_EXTRA_SORTING_OF_BAM_FILE_By_POSITION>
+
+
 10) check P/A genes
+
+
+
+
 11) check gaps
+
+check_gaps.py and analyze_sequences.py are customized for the investigation of gaps in the Col-0 reference genome sequence. Editing of paths in both scripts is necessary to apply them to other data sets.
+
+
+
+
 12) read length distribution
+
+python construct_read_lenght distribution_figure.py \
+--in <FULL_PATH_TO_INPUT_FILE (FASTA)> \
+--out <FULL_PATH_TO_OUTPUT_DIRECTORY>
+
