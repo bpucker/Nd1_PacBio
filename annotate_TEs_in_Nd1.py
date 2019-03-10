@@ -201,7 +201,7 @@ if __name__ == '__main__':
 	os.popen( "makeblastdb -in " + nd1_ref_seq_file + " -out " + target_blast_db + " -dbtype nucl" )
 	
 	
-	blastn_script = "/vol/cluster-data/bpucker/bin/scripts/run_blastn_on_cluster.py"
+	blastn_script = "run_blastn_on_cluster.py"
 	tmp_result_file = query_file + "_final_BLAST_results.txt"
 	
 	self_blast_result_file = prefix + "self_blast_result_file.txt"
