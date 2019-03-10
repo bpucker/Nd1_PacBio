@@ -6,7 +6,7 @@ These scripts are associated with the Nd-1 genome assembly based on PacBio data 
 
 python contig_stats.py \
 --input <FILENAME> \
-optional:
+optional: \
 --min_contig_len <INTEGER> [default=500] \
 --out <FULL_PATH_TO_OUTPUT_DIRECTORY>
 
@@ -34,8 +34,28 @@ python identify_RBHs.py \
 
 
 5) best protein match
+
+python match_proteins.py \
+--prefix <FULL_PATH_TO_DIRECTORY_FOR_TMP_DATA_AND_RESULTS> \
+--input1 <FULL_PATH_TO_INPUT_FILE1> \
+--input2 <FULL_PATH_TO_INPUT_FILE2>
+
+
 6) dotplot heatmap script
+
+python dot_plot_heatmap.py \
+--in1 <FULL_PATH_TO_FASTA_FILE1> \
+--in2 <FULL_PATH_TO_FASTA_FILE2> \
+--out <FULL_PATH_TO_OUTPUT_DIRECTORY>[.] \
+OPTIONAL: \
+--show	dot plot heatmap will be displayed as interactive figure \
+--cite	will not run the script, but display the reference to cite for it
+
 7) map annotation
+
+
+
+
 8) check TE overlap
 9) construct coverage file
 10) check P/A genes
