@@ -74,7 +74,7 @@ python construct_cov_file.py \
 
 
 10) check P/A genes
-
+coverage_assessment.py is customized for the investigation of presence/absence variations in Arabidopsis thaliana accessions based on a read mapping against the Nd-1 assembly. Editing is required to apply this script to other data sets.
 
 
 
@@ -91,3 +91,19 @@ python construct_read_lenght distribution_figure.py \
 --in <FULL_PATH_TO_INPUT_FILE (FASTA)> \
 --out <FULL_PATH_TO_OUTPUT_DIRECTORY>
 
+
+
+13) tRNA gene annotation analysis
+python compare_INFERNAL_to_tRNAscan.py \
+--infernal <FULL_PATH_TO_INFERNAL_RESULT_FILE> \
+--trnascan <FULL_PATH_TO_tRNAscan_RESULT_FILE>
+
+
+14) extraction of sequence blocks from the assembly
+
+python seqex.py \
+--in <FULL_PATH_TO_INPUT_FILE> \
+--out <FULL_PATH_TO_OUTPUT_FILE> \
+--contig <STRING, name of contig> \
+--start <INT, start of region to extract> \
+--end <INT, end of region to extract> \
