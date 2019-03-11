@@ -6,7 +6,7 @@ These scripts are associated with the Nd-1 genome assembly based on PacBio data 
 
 python contig_stats.py \
 --input <FILENAME> \
-optional: \
+OPTIONAL: \
 --min_contig_len <INTEGER> [default=500] \
 --out <FULL_PATH_TO_OUTPUT_DIRECTORY>
 
@@ -16,11 +16,11 @@ optional: \
 python sort_contigs_on_ref.py \
 --contig_file <FULL_PATH_TO_FILE> \
 --ref_file <FULL_PATH_TO_FILE> \
---output_dir <FULL_PATH_TO_DIR> \
+--output_dir <FULL_PATH_TO_DIRECTORY> \
 --species <SOME_SUFFIX_FOR_PSEUDOCHROMOSOME_NAMES>
 
 
-3) transfer TE annotation: this script uses the Araport11 TE annotation to anotate elements in a new assembly. BLASTn is used for the mapping of sequences. Overlapping hits are filtered to allow only one hit per position.
+3) transfer TE annotation: this script uses the Araport11 TE annotation to annotate elements in a new assembly. BLASTn is used for the mapping of sequences. Overlapping hits are filtered to allow only one hit per position.
 
 annotate_TEs_in_Nd1.py is customized for the annotation of the Nd-1 genome assembly based on Araport11. Adjustments in the script are required for application to other data sets.
 
@@ -42,15 +42,16 @@ python match_proteins.py \
 --input2 <FULL_PATH_TO_INPUT_FILE2>
 
 
-6) dotplot heatmap script: this scripts compares to FASTA files by running BLAST to identify similarity. Best matches for small chunks of the one sequence against the other one are used to generate a dot plot. The similarity of matches is represented by the color of dots.
+6) dotplot heatmap script: this script compares two FASTA files by running BLAST to identify similarity. Best matches for small chunks of the one sequence against the other one are used to generate a dot plot. The similarity of matches is represented by the colour of dots.
 
 python dot_plot_heatmap.py \
 --in1 <FULL_PATH_TO_FASTA_FILE1> \
 --in2 <FULL_PATH_TO_FASTA_FILE2> \
 --out <FULL_PATH_TO_OUTPUT_DIRECTORY>[.] \
 OPTIONAL: \
---show	dot plot heatmap will be displayed as interactive figure \
---cite	will not run the script, but display the reference to cite for it
+--show	(dot plot heatmap will be displayed as interactive figure) \
+--cite	(will not run the script, but display the reference to cite for it)
+
 
 7) map annotation: this script maps the Araport11 annotation to a file with Arabidopsis gene identifiers (AGIs).
 
@@ -60,17 +61,17 @@ python map_annotation.py \
 WARNING: path to annotation file must be added in this script!
 
 
-8) check TE overlap: this script checks annoated TEs in a genome sequence for overlap with annotated protein coding genes. Results are visualized as histogram.
+8) check TE overlap: this script checks annotated TEs in a genome sequence for overlap with annotated protein coding genes. Results are visualized as histogram.
 
 check_TEs_for_overlap_with_genes.py is customized for the analysis of Nd-1. Modification of paths within this script are required to apply it to other data sets.
 
 
-9) construct coverage file: this script generate a simple text file which conteins the coverage of each position in a genome sequence.
+9) construct coverage file: this script generate a simple text file which contains the coverage of each position in a genome sequence.
 
 python construct_cov_file.py \
 --in <BAM_FILE> \
 --out <OUTPUT_FILE> \
---bam_is_sorted <PREVENTS_EXTRA_SORTING_OF_BAM_FILE_BY_POSITION>
+--bam_is_sorted (PREVENTS_EXTRA_SORTING_OF_BAM_FILE_BY_POSITION)
 
 
 10) check P/A genes: this script allows pan-genomic analysis in Arabidopsis thaliana by assessing the presence/absence of genes based on read mapping results.
@@ -94,7 +95,7 @@ python construct_read_lenght distribution_figure.py \
 
 
 
-13) tRNA gene annotation analysis: this script calculates the overlap between two differen tRNA annotation methods. 
+13) tRNA gene annotation analysis: this script calculates the overlap between two different tRNA annotation methods. 
 
 python compare_INFERNAL_to_tRNAscan.py \
 --infernal <FULL_PATH_TO_INFERNAL_RESULT_FILE> \
@@ -108,4 +109,5 @@ python seqex.py \
 --out <FULL_PATH_TO_OUTPUT_FILE> \
 --contig <STRING, name of contig> \
 --start <INT, start of region to extract> \
---end <INT, end of region to extract> \
+--end <INT, end of region to extract>
+
