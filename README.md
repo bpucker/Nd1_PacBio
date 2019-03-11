@@ -1,3 +1,6 @@
+[![DOI](https://zenodo.org/badge/168144094.svg)](https://zenodo.org/badge/latestdoi/168144094)
+
+
 # Nd1_PacBio
 These scripts are associated with the Nd-1 genome assembly based on PacBio data (https://doi.org/10.1101/407627).
 
