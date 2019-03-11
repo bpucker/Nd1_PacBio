@@ -70,7 +70,7 @@ check_TEs_for_overlap_with_genes.py is customized for the analysis of Nd-1. Modi
 python construct_cov_file.py \
 --in <BAM_FILE> \
 --out <OUTPUT_FILE> \
---bam_is_sorted <PREVENTS_EXTRA_SORTING_OF_BAM_FILE_By_POSITION>
+--bam_is_sorted <PREVENTS_EXTRA_SORTING_OF_BAM_FILE_BY_POSITION>
 
 
 10) check P/A genes
